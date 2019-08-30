@@ -40,3 +40,7 @@ def test_xml_jss_settings():
 
 def test_xml_jss_actions():
     assert tools.xml_jss_actions(xml_text)
+
+
+def test_xml_recon():
+    assert tools.xml_recon(xml_text)
