@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+jamf_api_client
+.pytest_cache
+.idea
+.pytest_cache
+venv
+*__pycache__*
