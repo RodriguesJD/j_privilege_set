@@ -137,7 +137,7 @@ def xml_jss_actions(xml_text: str) -> str:
 
 def xml_recon(xml_text: str) -> str:
     """
-    Gathers the jss_actions data.
+    Gathers the jss_recon data.
 
     :param xml_text: str
     :return: str
@@ -147,6 +147,6 @@ def xml_recon(xml_text: str) -> str:
 
     return recon
 
-# recon casper_admin casper_remote casper_imaging
+# casper_admin casper_remote casper_imaging
 
 
