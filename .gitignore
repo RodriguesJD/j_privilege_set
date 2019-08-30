@@ -5,3 +5,4 @@ jamf_api_client
 .pytest_cache
 venv
 *__pycache__*
+*.xml*
