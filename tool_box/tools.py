@@ -110,6 +110,34 @@ def xml_jss_objects(xml_text: str) -> str:
     return jss_objects
 
 
+def desktop_support_jss_objects():
+    privs = "<jss_objects>" \
+            "<privilege>Create Advanced Computer Searches" \
+            "</privilege><privilege>Read Advanced Computer Searches" \
+            "</privilege><privilege>Update Advanced Computer Searches" \
+            "</privilege><privilege>Delete Advanced Computer Searches</privilege>" \
+            "<privilege>Create Advanced Mobile Device Searches</privilege>" \
+            "<privilege>Read Advanced Mobile Device Searches</privilege>" \
+            "<privilege>Update Advanced Mobile Device Searches</privilege>" \
+            "<privilege>Delete Advanced Mobile Device Searches</privilege>" \
+            "<privilege>Create Advanced User Searches</privilege>" \
+            "<privilege>Read Advanced User Searches</privilege>" \
+            "<privilege>Update Advanced User Searches</privilege>" \
+            "<privilege>Delete Advanced User Searches</privilege>" \
+            "<privilege>Create Advanced User Content Searches</privilege>" \
+            "<privilege>Read Advanced User Content Searches</privilege>" \
+            "<privilege>Update Advanced User Content Searches</privilege>" \
+            "<privilege>Delete Advanced User Content Searches</privilege>" \
+            "<privilege>Read AirPlay Permissions</privilege>" \
+            "<privilege>Read Allowed File Extension</privilege>" \
+            "<privilege>Read_API_Integrations</privilege>" \
+            "<privilege>Read Attachment Assignments</privilege>" \
+            "<privilege>Read Buildings</privilege><privilege>Read Categories</privilege><privilege>Read Classes</privilege><privilege>Read Computer Enrollment Invitations</privilege><privilege>Read Computer PreStage Enrollments</privilege><privilege>Read Computers</privilege><privilege>Read Configurations</privilege><privilege>Read Departments</privilege><privilege>Read Device Enrollment Program Instances</privilege><privilege>Read Device Name Patterns</privilege><privilege>Read Directory Bindings</privilege><privilege>Read Disk Encryption Configurations</privilege><privilege>Read Disk Encryption Institutional Configurations</privilege><privilege>Read Dock Items</privilege><privilege>Read eBooks</privilege><privilege>Read Enrollment Profiles</privilege><privilege>Read Computer Extension Attributes</privilege><privilege>Read Patch External Source</privilege><privilege>Read File Attachments</privilege><privilege>Read Distribution Points</privilege><privilege>Read Push Certificates</privilege><privilege>Read iBeacon</privilege><privilege>Read Infrastructure Managers</privilege><privilege>Read Inventory Preload Records</privilege><privilege>Read Accounts</privilege><privilege>Read JSON Web Token Configuration</privilege><privilege>Read Keystores</privilege><privilege>Read LDAP Servers</privilege><privilege>Read Licensed Software</privilege><privilege>Read Mac Applications</privilege><privilege>Read macOS Configuration Profiles</privilege><privilege>Read Maintenance Pages</privilege><privilege>Read Managed Preference Profiles</privilege><privilege>Read Mobile Device Applications</privilege><privilege>Read iOS Configuration Profiles</privilege><privilege>Read Mobile Device Enrollment Invitations</privilege><privilege>Read Mobile Device Extension Attributes</privilege><privilege>Read Mobile Device Managed App Configurations</privilege><privilege>Read Mobile Device PreStage Enrollments</privilege><privilege>Read Mobile Devices</privilege><privilege>Read NetBoot Servers</privilege><privilege>Read Network Integration</privilege><privilege>Read Network Segments</privilege><privilege>Read Packages</privilege><privilege>Read Patch Management Software Titles</privilege><privilege>Read Patch Policies</privilege><privilege>Read Peripheral Types</privilege><privilege>Read Personal Device Configurations</privilege><privilege>Read Personal Device Profiles</privilege><privilege>Read Policies</privilege><privilege>Read PreStages</privilege><privilege>Read Printers</privilege><privilege>Read Provisioning Profiles</privilege><privilege>Read Push Certificates</privilege><privilege>Read Removable MAC Address</privilege><privilege>Read Restricted Software</privilege><privilege>Read Scripts</privilege><privilege>Read Self Service Bookmarks</privilege><privilege>Read Self Service Branding Configuration</privilege><privilege>Read Sites</privilege><privilege>Read Smart Computer Groups</privilege><privilege>Read Smart Mobile Device Groups</privilege><privilege>Read Smart User Groups</privilege><privilege>Read Static Computer Groups</privilege><privilege>Read Static Mobile Device Groups</privilege><privilege>Read Static User Groups</privilege><privilege>Read User Extension Attributes</privilege><privilege>Read User</privilege><privilege>Read VPP Administrator Accounts</privilege><privilege>Read VPP Assignment</privilege><privilege>Read VPP Invitations</privilege><privilege>Read Webhooks</privilege>" \
+            "</jss_objects>"
+
+    return privs
+
+
 def xml_jss_settings(xml_text: str) -> str:
     """
     Gathers the jss_settings data.
