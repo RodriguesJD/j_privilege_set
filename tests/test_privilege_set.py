@@ -48,3 +48,7 @@ def test_xml_recon():
 
 def test_xml_casper_admin():
     assert tools.xml_casper_admin(xml_text)
+
+
+def test_xml_casper_remote():
+    assert tools.xml_casper_remote(xml_text)

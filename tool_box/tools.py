@@ -161,6 +161,19 @@ def xml_casper_admin(xml_text: str) -> str:
 
     return casper_admin
 
-# casper_admin casper_remote casper_imaging
+
+def xml_casper_remote(xml_text: str) -> str:
+    """
+    Gathers the casper_remote data.
+
+    :param xml_text: str
+    :return: str
+    """
+    jamf_remote = xml_text.split("<casper_remote>")[1].split("</casper_remote>")[0]
+    casper_remote = f"<casper_remote>{jamf_remote}</casper_remote>"
+
+    return casper_remote
+
+# casper_imaging
 
 
