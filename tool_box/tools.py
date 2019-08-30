@@ -186,6 +186,14 @@ def xml_casper_imaging(xml_text: str) -> str:
     casper_imaging = f"<casper_imaging>{jamf_imaging}</casper_imaging>"
 
     return casper_imaging
-# casper_imaging
 
+
+def privilege_wrapper(xml_text: str) -> str:
+    """
+    Wraps the xml_text in privileges tags and closes the account tag since privileges is always the second to last tag.
+
+    :param xml_text: str
+    :return: str
+    """
+    return f"<privileges>{xml_text}<privileges></account>"
 

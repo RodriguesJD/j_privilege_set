@@ -57,3 +57,6 @@ def test_xml_casper_remote():
 def test_xml_casper_imaging():
     assert tools.xml_casper_imaging(xml_text)
 
+
+def test_privilege_wrapper():
+    assert tools.privilege_wrapper(xml_text)
