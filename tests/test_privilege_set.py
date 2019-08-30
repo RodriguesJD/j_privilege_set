@@ -44,3 +44,7 @@ def test_xml_jss_actions():
 
 def test_xml_recon():
     assert tools.xml_recon(xml_text)
+
+
+def test_xml_casper_admin():
+    assert tools.xml_casper_admin(xml_text)
