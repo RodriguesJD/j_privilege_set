@@ -1,5 +1,5 @@
-import privilege_set
+from tool_box import tools
 
 
 def test_get_accounts_xml():
-    isinstance(privilege_set.get_accounts_xml().text, str)
+    isinstance(tools.get_accounts_xml().text, str)
