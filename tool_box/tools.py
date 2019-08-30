@@ -195,5 +195,5 @@ def privilege_wrapper(xml_text: str) -> str:
     :param xml_text: str
     :return: str
     """
-    return f"<privileges>{xml_text}<privileges></account>"
+    return f"<privileges>{xml_text}</privileges></account>"
 
