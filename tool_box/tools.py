@@ -6,6 +6,7 @@ import sys
 import xml.dom.minidom
 from xml.etree import ElementTree
 from typing import Type
+from typing import Union
 sys.path.insert(0, 'jamf_api_client/')
 from jamf_api_client.core.get_jamf.accounts import Accounts
 
@@ -16,25 +17,48 @@ base_url = os.environ["JAMF_URL_PROD"]
 user_id = os.environ["USER_ID_SET_TEST"]
 
 
-def get_accounts_xml():
+def get_accounts_xml() -> object:
+    """
+    Get xml data from JAMF environment.
+
+    :return: Response object from the request module
+    """
     req = requests.get(f'{base_url}/accounts/userid/{user_id}', auth=HTTPBasicAuth(username, key),
                        headers={'Accept': 'application/xml'})
     return req
 
 
-def put_trr_jamf(put_xml: str):
+def put_trr_jamf(put_xml: str) -> object:
+    """
+    Put xml data on JAMF environment.
+
+    :param put_xml: str
+    :return: Response object from the request module
+    """
     return requests.put(f'{base_url}/accounts/userid/{user_id}',
                         auth=HTTPBasicAuth(username, key), headers={'Content-Type': 'application/xml'}, data=put_xml)
 
 
-def xml_str(xml_text):
+def xml_str(xml_text: str) -> str:
+    """
+    Pretty print xml data from xml string.
+
+    :param xml_text: str
+    :return: str
+    """
     dom = xml.dom.minidom.parseString(xml_text)
     pretty_xml_as_string = dom.toprettyxml()
 
     return pretty_xml_as_string
 
 
-def is_acceptable_privilege_set(privilege_set):
+def is_acceptable_privilege_set(privilege_set: str) -> bool:
+    """
+    Validates if the privilege_set is correct.
+
+    :param privilege_set: str
+    :return: bool
+    """
     acceptable_privilege_set = False
     privilege_sets = ["Administrator", "Auditor", "Enrollment Only", "Custom"]
     if privilege_set in privilege_sets:
@@ -43,9 +67,13 @@ def is_acceptable_privilege_set(privilege_set):
     return acceptable_privilege_set
 
 
-def xml_user_info(privilege_set, xml_text):
+def xml_user_info(privilege_set: str, xml_text: str) -> Union[None, str]:
     """
     Gather users info from xml_text.
+
+    :param privilege_set: str
+    :param xml_text: str
+    :return: str
     """
     pre_privlege_xml = None
 
@@ -56,7 +84,13 @@ def xml_user_info(privilege_set, xml_text):
     return pre_privlege_xml
 
 
-def xml_user_privileges(xml_text):
+def xml_user_privileges(xml_text: str) -> str:
+    """
+    Gathers the privileges data and adds accounts to close the xml tags.
+
+    :param xml_text: str
+    :return: str
+    """
     privileges = xml_text.split("<privileges>")[1].split("</privileges>")[0]
     users_privileges = f"<privileges>{privileges}</privileges></account>"
 
