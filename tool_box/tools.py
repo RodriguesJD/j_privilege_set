@@ -34,18 +34,16 @@ def xml_str(xml_text):
     return pretty_xml_as_string
 
 
-def xml_account_info(privilege_set, xml_text):
-    """
-    Parse xml_text and pass in the privilage_set var. Privilege set must be an excising option.
-    :param privilege_set:
-    :param xml_text:
-    :return:
-    """
-    xml_account_info_header = xml_text.split('<privilege_set>')[0]
+def is_acceptable_privilege_set(privilege_set):
+    acceptable_privilege_set = False
+    privilege_sets = ["Administrator", "Auditor", "Enrollment Only", "Custom"]
+    if privilege_set in privilege_sets:
+        acceptable_privilege_set = True
 
-    priv_set = f"<privilege_set>{privilege_set}</privilege_set>"
+    return acceptable_privilege_set
 
-    return xml_account_info_header + priv_set
+
+
 
 
 

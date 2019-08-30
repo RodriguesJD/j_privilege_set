@@ -1,5 +1,6 @@
 from tool_box import tools
 
+xml_text = tools.get_accounts_xml().text
 
 def test_get_accounts_xml():
     get_account = tools.get_accounts_xml()
@@ -8,8 +9,12 @@ def test_get_accounts_xml():
 
 
 def test_xml_str():
-    xml_text = tools.get_accounts_xml().text
     assert isinstance(xml_text, str)
-
     root = tools.xml_str(xml_text)
     assert isinstance(root, str)
+
+
+def test_is_acceptable_privilege_set():
+    assert tools.is_acceptable_privilege_set("Administrator")
+
+    assert not tools.is_acceptable_privilege_set("bad priv set")
