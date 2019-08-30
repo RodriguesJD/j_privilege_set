@@ -52,3 +52,8 @@ def test_xml_casper_admin():
 
 def test_xml_casper_remote():
     assert tools.xml_casper_remote(xml_text)
+
+
+def test_xml_casper_imaging():
+    assert tools.xml_casper_imaging(xml_text)
+

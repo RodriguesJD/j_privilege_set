@@ -174,6 +174,18 @@ def xml_casper_remote(xml_text: str) -> str:
 
     return casper_remote
 
+
+def xml_casper_imaging(xml_text: str) -> str:
+    """
+    Gathers the casper_imaging data.
+
+    :param xml_text: str
+    :return: str
+    """
+    jamf_imaging = xml_text.split("<casper_imaging>")[1].split("</casper_imaging>")[0]
+    casper_imaging = f"<casper_imaging>{jamf_imaging}</casper_imaging>"
+
+    return casper_imaging
 # casper_imaging
 
 
