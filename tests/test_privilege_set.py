@@ -29,3 +29,7 @@ def test_xml_account_info():
 def test_xml_user_privileges():
     assert tools.xml_user_privileges(xml_text)
 
+
+def test_xml_jss_objects():
+    assert tools.xml_jss_objects(xml_text)
+

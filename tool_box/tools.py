@@ -97,6 +97,20 @@ def xml_user_privileges(xml_text: str) -> str:
     return users_privileges
 
 
+def xml_jss_objects(xml_text: str) -> str:
+    """
+    Gathers the jss_objects data.
+
+    :param xml_text: str
+    :return: str
+    """
+    jamf_pro_server_objects = xml_text.split("<jss_objects>")[1].split("</jss_objects>")[0]
+    jss_objects = f"<jss_objects>{jamf_pro_server_objects}</jss_objects>"
+
+    return jss_objects
+
+
+#Get jss_objects data from xml_text."
 
 
 

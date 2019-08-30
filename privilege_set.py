@@ -4,11 +4,7 @@ from tool_box import tools
 
 xml_text = tools.get_accounts_xml().text
 
-put_xml_data = tools.xml_user_info("Custom", xml_text) + tools.xml_user_privileges(xml_text)
-
-print(put_xml_data)
-t = tools.put_trr_jamf(put_xml_data)
-print(t.status_code)
+tools.xml_jss_objects(xml_text)
 # def create_text_from_resp(xml_text):
 #     with open("administrator_permissions.xml", "w") as f:
 #         f.write(xml_text)
