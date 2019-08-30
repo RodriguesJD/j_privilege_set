@@ -22,20 +22,12 @@ def get_accounts_xml():
     return req
 
 
-def xml_root(xml_text):
-    dom = xml.dom.minidom.parseString(get_accounts_xml().text)
+def xml_str(xml_text):
+    dom = xml.dom.minidom.parseString(xml_text)
     pretty_xml_as_string = dom.toprettyxml()
 
     return pretty_xml_as_string
 
-def xml_pprint():
-
-    return pretty_xml_as_string
-
-
-def current_users_privileges():
-    # TODO use the current privileges as a template for setting
-    pass
 
 
 
