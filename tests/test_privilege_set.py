@@ -37,3 +37,6 @@ def test_xml_jss_objects():
 def test_xml_jss_settings():
     assert tools.xml_jss_settings(xml_text)
 
+
+def test_xml_jss_actions():
+    assert tools.xml_jss_actions(xml_text)

@@ -123,4 +123,18 @@ def xml_jss_settings(xml_text: str) -> str:
     return jss_settings
 
 
+def xml_jss_actions(xml_text: str) -> str:
+    """
+    Gathers the jss_actions data.
+
+    :param xml_text: str
+    :return: str
+    """
+    jamf_pro_server_actions = xml_text.split("<jss_actions>")[1].split("</jss_actions>")[0]
+    jss_actions = f"<jss_actions>{jamf_pro_server_actions}</jss_actions>"
+
+    return jss_actions
+
+# recon casper_admin casper_remote casper_imaging
+
 
