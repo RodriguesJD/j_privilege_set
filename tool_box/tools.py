@@ -4,6 +4,7 @@ import requests
 import os
 import sys
 import xml.dom.minidom
+from xml.etree import ElementTree
 from typing import Type
 sys.path.insert(0, 'jamf_api_client/')
 from jamf_api_client.core.get_jamf.accounts import Accounts
@@ -20,8 +21,10 @@ def get_accounts_xml():
                        headers={'Accept': 'application/xml'})
     return req
 
-def xml_root():
-    pass
+
+def xml_root(xml_text):
+    root = ElementTree.fromstring(xml_text)
+    return root
 
 
 def xml_pprint():
