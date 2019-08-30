@@ -43,6 +43,18 @@ def is_acceptable_privilege_set(privilege_set):
     return acceptable_privilege_set
 
 
+def xml_user_info(privilege_set, xml_text):
+    """
+    Gather users info from xml_text.
+    """
+    pre_privlege_xml = None
+
+    if is_acceptable_privilege_set(privilege_set):
+        pre_privlege_xml = xml_text.split('<privilege_set>')[0]
+        pre_privlege_xml += f"<privilege_set>{privilege_set}</privilege_set>"
+
+    return pre_privlege_xml
+
 
 
 

@@ -3,7 +3,7 @@ from tool_box import tools
 
 
 xml_text = tools.get_accounts_xml().text
-print(tools.xml_account_info("Custom", xml_text))
+print(tools.xml_user_info("Custom", xml_text))
 # def create_text_from_resp(xml_text):
 #     with open("administrator_permissions.xml", "w") as f:
 #         f.write(xml_text)
