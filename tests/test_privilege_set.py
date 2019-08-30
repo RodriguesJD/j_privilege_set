@@ -33,3 +33,7 @@ def test_xml_user_privileges():
 def test_xml_jss_objects():
     assert tools.xml_jss_objects(xml_text)
 
+
+def test_xml_jss_settings():
+    assert tools.xml_jss_settings(xml_text)
+

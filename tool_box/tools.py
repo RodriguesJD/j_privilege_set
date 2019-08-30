@@ -110,8 +110,17 @@ def xml_jss_objects(xml_text: str) -> str:
     return jss_objects
 
 
-#Get jss_objects data from xml_text."
+def xml_jss_settings(xml_text: str) -> str:
+    """
+    Gathers the jss_settings data.
 
+    :param xml_text: str
+    :return: str
+    """
+    jamf_pro_server_settings = xml_text.split("<jss_settings>")[1].split("</jss_settings>")[0]
+    jss_settings = f"<jss_settings>{jamf_pro_server_settings}</jss_settings>"
+
+    return jss_settings
 
 
 
