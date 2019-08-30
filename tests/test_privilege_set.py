@@ -24,3 +24,8 @@ def test_xml_account_info():
     assert isinstance(tools.xml_user_info("Administrator", xml_text), str)
 
     assert not tools.xml_user_info("bad set", xml_text)
+
+
+def test_xml_user_privileges():
+    assert tools.xml_user_privileges(xml_text)
+

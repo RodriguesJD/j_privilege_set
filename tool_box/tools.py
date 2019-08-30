@@ -56,7 +56,11 @@ def xml_user_info(privilege_set, xml_text):
     return pre_privlege_xml
 
 
+def xml_user_privileges(xml_text):
+    privileges = xml_text.split("<privileges>")[1].split("</privileges>")[0]
+    users_privileges = f"<privileges>{privileges}</privileges></account>"
 
+    return users_privileges
 
 
 
