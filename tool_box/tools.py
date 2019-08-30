@@ -23,13 +23,13 @@ def get_accounts_xml():
 
 
 def xml_root(xml_text):
-    root = ElementTree.fromstring(xml_text)
-    return root
-
-
-def xml_pprint():
     dom = xml.dom.minidom.parseString(get_accounts_xml().text)
     pretty_xml_as_string = dom.toprettyxml()
+
+    return pretty_xml_as_string
+
+def xml_pprint():
+
     return pretty_xml_as_string
 
 
