@@ -225,7 +225,7 @@ def xml_jss_actions(xml_text: str) -> str:
 def desktop_support_jss_actions() -> str:
     """
     Desktop support privileges for Jamf Pro Server Actions.
-    :return:
+    :return: str
     """
     desktop_support_actions = "<jss_actions>" \
                               "<privilege>Allow User to Enroll</privilege>" \
