@@ -323,7 +323,7 @@ def xml_casper_admin(xml_text: str) -> str:
 def desktop_support_casper_admin() -> str:
     """
     Desktop support privileges for jamf admin.
-    :return:
+    :return: str
     """
     casper_admin = "<casper_admin>" \
                    "<privilege>Use Casper Admin</privilege>" \
