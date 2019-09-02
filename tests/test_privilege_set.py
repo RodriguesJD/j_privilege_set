@@ -64,6 +64,10 @@ def test_xml_jss_actions():
     assert tools.xml_jss_actions(xml_text)
 
 
+def test_desktop_support_jss_actions():
+    assert tools.is_xml_str(tools.desktop_support_jss_actions())
+
+
 def test_xml_recon():
     assert tools.xml_recon(xml_text)
 

@@ -222,6 +222,61 @@ def xml_jss_actions(xml_text: str) -> str:
     return jss_actions
 
 
+def desktop_support_jss_actions() -> str:
+    desktop_support_actions = "<jss_actions>" \
+                              "<privilege>Allow User to Enroll</privilege>" \
+                              "<privilege>Assign Users to Mobile Devices</privilege>" \
+                              "<privilege>Change Password</privilege>" \
+                              "<privilege>Dismiss Notifications</privilege>" \
+                              "<privilege>Enroll Computers and Mobile Devices</privilege>" \
+                              "<privilege>Remove restrictions set by Jamf Parent</privilege>" \
+                              "<privilege>Send Blank Pushes to Mobile Devices</privilege>" \
+                              "<privilege>Send Computer Bluetooth Command</privilege>" \
+                              "<privilege>Send Computer Delete User Account Command</privilege>" \
+                              "<privilege>Send Computer Remote Command to Download and Install OS X Update</privilege>" \
+                              "<privilege>Send Computer Remote Desktop Command</privilege>" \
+                              "<privilege>Send Computer Remote Lock Command</privilege>" \
+                              "<privilege>Send Computer Remote Wipe Command</privilege>" \
+                              "<privilege>Send Computer Unlock User Account Command</privilege>" \
+                              "<privilege>Send Computer Unmanage Command</privilege>" \
+                              "<privilege>Send Email to End Users via JSS</privilege>" \
+                              "<privilege>Send Inventory Requests to Mobile Devices</privilege>" \
+                              "<privilege>Send Messages to Self Service Mobile</privilege>" \
+                              "<privilege>Send Mobile Device Bluetooth Command</privilege>" \
+                              "<privilege>Send Mobile Device Diagnostics and Usage Reporting and App Analytics Commands</privilege>" \
+                              "<privilege>Send Mobile Device Disable Data Roaming Command</privilege>" \
+                              "<privilege>Send Mobile Device Disable Voice Roaming Command</privilege>" \
+                              "<privilege>Send Mobile Device Enable Data Roaming Command</privilege>" \
+                              "<privilege>Send Mobile Device Enable Voice Roaming Command</privilege>" \
+                              "<privilege>Send Mobile Device Lost Mode Command</privilege>" \
+                              "<privilege>Send Mobile Device Managed Settings Command</privilege>" \
+                              "<privilege>Send Mobile Device Mirroring Command</privilege>" \
+                              "<privilege>Send Mobile Device Personal Hotspot Command</privilege>" \
+                              "<privilege>Send Mobile Device Remote Command to Download and Install iOS Update</privilege>" \
+                              "<privilege>Send Mobile Device Remote Lock Command</privilege>" \
+                              "<privilege>Send Mobile Device Remote Wipe Command</privilege>" \
+                              "<privilege>Send Mobile Device Remove Passcode Command</privilege>" \
+                              "<privilege>Send Mobile Device Remove Restrictions Password Command</privilege>" \
+                              "<privilege>Send Mobile Device Restart Device Command</privilege>" \
+                              "<privilege>Send Mobile Device Set Activation Lock Command</privilege>" \
+                              "<privilege>Send Mobile Device Set Device Name Command</privilege>" \
+                              "<privilege>Send Mobile Device Set Wallpaper Command</privilege>" \
+                              "<privilege>Send Mobile Device Shared iPad Commands</privilege>" \
+                              "<privilege>Send Mobile Device Shut Down Command</privilege>" \
+                              "<privilege>Send Update Passcode Lock Grace Period Command</privilege>" \
+                              "<privilege>Unmanage Mobile Devices</privilege>" \
+                              "<privilege>View Activation Lock Bypass Code</privilege>" \
+                              "<privilege>View Disk Encryption Recovery Key</privilege>" \
+                              "<privilege>View Event Logs</privilege><" \
+                              "privilege>View JSS Information</privilege>" \
+                              "<privilege>View License Serial Numbers</privilege>" \
+                              "<privilege>View Mobile Device Lost Mode Location</privilege>" \
+                              "</jss_actions>"
+
+    return desktop_support_actions
+
+
+
 def xml_recon(xml_text: str) -> str:
     """
     Gathers the jss_recon data.
