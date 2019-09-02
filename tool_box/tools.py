@@ -276,7 +276,6 @@ def desktop_support_jss_actions() -> str:
     return desktop_support_actions
 
 
-
 def xml_recon(xml_text: str) -> str:
     """
     Gathers the jss_recon data.
@@ -286,6 +285,15 @@ def xml_recon(xml_text: str) -> str:
     """
     jamf_pro_recon = xml_text.split("<recon>")[1].split("</recon>")[0]
     recon = f"<recon>{jamf_pro_recon}</recon>"
+
+    return recon
+
+
+def desktop_support_recon():
+    recon = "<recon>" \
+            "<privilege>Add Computers Remotely</privilege>" \
+            "<privilege>Create QuickAdd Packages</privilege>" \
+            "</recon>"
 
     return recon
 
