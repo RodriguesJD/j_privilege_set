@@ -127,6 +127,10 @@ def xml_jss_objects(xml_text: str) -> str:
 
 
 def desktop_support_jss_objects():
+    """
+    Desktop support privileges for Jamf Pro Server Objects.
+    :return: str
+    """
     privs = "<jss_objects>" \
             "<privilege>Create Advanced Computer Searches" \
             "</privilege><privilege>Read Advanced Computer Searches" \
