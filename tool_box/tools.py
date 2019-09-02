@@ -67,6 +67,22 @@ def is_acceptable_privilege_set(privilege_set: str) -> bool:
     return acceptable_privilege_set
 
 
+def is_xml(xml_to_check: str) -> bool:
+    """
+    Check to see that the string is formatted for xml.
+
+    :param xml_to_check: str
+    :return: bool
+    """
+    try:
+        ElementTree.fromstring(xml_to_check)
+        xml_status = True
+    except ElementTree.ParseError:
+        xml_status = False
+
+    return xml_status
+
+
 def xml_user_info(privilege_set: str, xml_text: str) -> Union[None, str]:
     """
     Gather users info from xml_text.
