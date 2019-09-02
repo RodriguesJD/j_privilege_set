@@ -88,6 +88,10 @@ def test_xml_casper_remote():
     assert tools.xml_casper_remote(xml_text)
 
 
+def test_desktop_support_casper_remote():
+    assert tools.is_xml_str(tools.desktop_support_casper_remote())
+
+
 def test_xml_casper_imaging():
     assert tools.xml_casper_imaging(xml_text)
 

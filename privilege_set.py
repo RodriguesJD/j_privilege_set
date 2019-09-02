@@ -10,20 +10,24 @@ desktop_support_jss_settings = tools.desktop_support_jss_settings()
 
 desktop_support_jss_actions = tools.desktop_support_jss_actions()
 
-desktop_support_recon = tools.xml_recon()
+desktop_support_recon = tools.desktop_support_recon()
 
-desktop_support_jamf_admin = tools.xml_casper_admin()
+desktop_support_jamf_admin = tools.desktop_support_casper_admin()
 
-desktop_support_casper_remote = tools.xml_casper_remote(xml_text)
-# privileges = desktop_support_jss_objects + desktop_support_jss_settings + desktop_support_jss_actions
-#
-# wrapped_up_privileges = tools.privilege_wrapper(privileges)
-#
-# put_xml = xml_user_info + wrapped_up_privileges
-#
-# put = tools.put_trr_jamf(put_xml)
-#
-# print(put.status_code)
+desktop_support_casper_remote = tools.desktop_support_casper_remote()
+
+
+privileges = desktop_support_jss_objects + \
+             desktop_support_jss_settings + \
+             desktop_support_jss_actions
+
+wrapped_up_privileges = tools.privilege_wrapper(privileges)
+
+put_xml = xml_user_info + wrapped_up_privileges
+
+put = tools.put_trr_jamf(put_xml)
+
+print(put.status_code)
 
 
 

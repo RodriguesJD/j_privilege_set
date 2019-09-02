@@ -354,15 +354,28 @@ def xml_casper_remote(xml_text: str) -> str:
     return casper_remote
 
 
-def desktop_support_casper_remote(xml_text):
+def desktop_support_casper_remote():
     """
-    Desktop support privileges for jamf admin.
+    Desktop support privileges for casper_remote.
     :return: str
     """
-    jamf_remote = xml_text.split("<casper_remote>")[1].split("</casper_remote>")[0].split('<privilege>')
-
-    for remote_priv in jamf_remote:
-        print(f"<privilege{remote_priv}")
+    jamf_remote = "<casper_remote>" \
+                  "<privilege>Use Casper Remote</privilege>" \
+                  "<privilege>Install/Uninstall Software Remotely</privilege>" \
+                  "<privilege>Run Scripts Remotely</privilege>" \
+                  "<privilege>Map Printers Remotely</privilege>" \
+                  "<privilege>Add Dock Items Remotely</privilege>" \
+                  "<privilege>Manage Local User Accounts Remotely</privilege>" \
+                  "<privilege>Change Management Account Remotely</privilege>" \
+                  "<privilege>Bind to Active Directory Remotely</privilege>" \
+                  "<privilege>Set Open Firmware/EFI Passwords Remotely</privilege>" \
+                  "<privilege>Reboot Computers Remotely</privilege>" \
+                  "<privilege>Perform Maintenance Tasks Remotely</privilege>" \
+                  "<privilege>Search for Files/Processes Remotely</privilege>" \
+                  "<privilege>Enable Disk Encryption Configurations Remotely</privilege>" \
+                  "<privilege>Screen Share with Remote Computers</privilege>" \
+                  "<privilege>Screen Share with Remote Computers Without Asking</privilege>" \
+                  "</casper_remote>"
 
     return jamf_remote
 
