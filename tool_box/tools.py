@@ -102,6 +102,7 @@ def xml_user_info(privilege_set: str, xml_text: str) -> Union[None, str]:
 
 def make_user_admin(xml_text):
     """
+    Grant user admin rights.
     :param xml_text:
     :return: int
     """
