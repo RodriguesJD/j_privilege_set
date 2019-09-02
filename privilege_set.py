@@ -19,7 +19,8 @@ desktop_support_casper_remote = tools.desktop_support_casper_remote()
 
 privileges = desktop_support_jss_objects + \
              desktop_support_jss_settings + \
-             desktop_support_jss_actions
+             desktop_support_jss_actions + \
+             desktop_support_recon
 
 wrapped_up_privileges = tools.privilege_wrapper(privileges)
 
@@ -31,7 +32,8 @@ print(put.status_code)
 
 make_user_admin_prompt = input("type yes to make user an admin")
 if make_user_admin_prompt == 'yes':
-    tools.make_user_admin(xml_text)
+    print(tools.make_user_admin(xml_text))
+
 
 
 

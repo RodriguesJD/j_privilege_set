@@ -102,14 +102,15 @@ def xml_user_info(privilege_set: str, xml_text: str) -> Union[None, str]:
 
 def make_user_admin(xml_text):
     """
-
-    :param privilege_set: str
-    :param xml_text: str
-    :return: str
+    :param xml_text:
+    :return: int
     """
     privilege_set = 'Administrator'
-    user_info = xml_user_info(privilege_set, xml_text)
-    put_trr_jamf(put_xml=user_info)
+    user_info = xml_user_info(privilege_set=privilege_set, xml_text=xml_text)
+    priv_with_account_tag = f"{user_info}</account>"
+    put = put_trr_jamf(put_xml=priv_with_account_tag)
+
+    return put.status_code
 
 
 def xml_user_privileges(xml_text: str) -> str:
