@@ -354,6 +354,19 @@ def xml_casper_remote(xml_text: str) -> str:
     return casper_remote
 
 
+def desktop_support_casper_remote(xml_text):
+    """
+    Desktop support privileges for jamf admin.
+    :return: str
+    """
+    jamf_remote = xml_text.split("<casper_remote>")[1].split("</casper_remote>")[0].split('<privilege>')
+
+    for remote_priv in jamf_remote:
+        print(f"<privilege{remote_priv}")
+
+    return jamf_remote
+
+
 def xml_casper_imaging(xml_text: str) -> str:
     """
     Gathers the casper_imaging data.
