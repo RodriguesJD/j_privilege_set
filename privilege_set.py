@@ -20,7 +20,7 @@ desktop_support_casper_remote = tools.desktop_support_casper_remote()
 privileges = desktop_support_jss_objects + \
              desktop_support_jss_settings + \
              desktop_support_jss_actions + \
-             desktop_support_recon
+             desktop_support_recon + desktop_support_jamf_admin
 
 wrapped_up_privileges = tools.privilege_wrapper(privileges)
 
