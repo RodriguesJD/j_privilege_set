@@ -168,6 +168,10 @@ def xml_jss_settings(xml_text: str) -> str:
 
 
 def desktop_support_jss_settings() -> str:
+    """
+    Desktop support privileges for Jamf Pro Server Settings.
+    :return: str
+    """
     desktop_settings = "<jss_settings>" \
                        "<privilege>Read Activation Code</privilege>" \
                        "<privilege>Read Apache Tomcat Settings</privilege>" \
