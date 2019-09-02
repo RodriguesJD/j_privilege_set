@@ -29,6 +29,11 @@ put = tools.put_trr_jamf(put_xml)
 
 print(put.status_code)
 
+make_user_admin_prompt = input("type yes to make user an admin")
+if make_user_admin_prompt == 'yes':
+    tools.make_user_admin(xml_text)
+
+
 
 
 

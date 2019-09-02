@@ -100,6 +100,18 @@ def xml_user_info(privilege_set: str, xml_text: str) -> Union[None, str]:
     return pre_privlege_xml
 
 
+def make_user_admin(xml_text):
+    """
+
+    :param privilege_set: str
+    :param xml_text: str
+    :return: str
+    """
+    privilege_set = 'Administrator'
+    user_info = xml_user_info(privilege_set, xml_text)
+    put_trr_jamf(put_xml=user_info)
+
+
 def xml_user_privileges(xml_text: str) -> str:
     """
     Gathers the privileges data and adds accounts to close the xml tags.
