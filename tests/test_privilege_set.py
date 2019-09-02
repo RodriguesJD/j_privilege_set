@@ -48,8 +48,16 @@ def test_xml_jss_objects():
     assert tools.xml_jss_objects(xml_text)
 
 
+def test_desktop_support_jss_objects():
+    assert tools.is_xml_str(tools.desktop_support_jss_objects())
+
+
 def test_xml_jss_settings():
     assert tools.xml_jss_settings(xml_text)
+
+
+def test_desktop_support_jss_settings():
+    assert tools.is_xml_str(tools.desktop_support_jss_settings())
 
 
 def test_xml_jss_actions():

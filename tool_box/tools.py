@@ -167,6 +167,48 @@ def xml_jss_settings(xml_text: str) -> str:
     return jss_settings
 
 
+def desktop_support_jss_settings() -> str:
+    desktop_settings = "<jss_settings>" \
+                       "<privilege>Read Activation Code</privilege>" \
+                       "<privilege>Read Apache Tomcat Settings</privilege>" \
+                       "<privilege>Read Apple Configurator Enrollment</privilege>" \
+                       "<privilege>Read Education Settings</privilege>" \
+                       "<privilege>Read Mobile Device App Maintenance Settings</privilege>" \
+                       "<privilege>Read Autorun Imaging</privilege>" \
+                       "<privilege>Read Cache</privilege>" \
+                       "<privilege>Read Change Management</privilege>" \
+                       "<privilege>Read Computer Check-In</privilege>" \
+                       "<privilege>Read Cloud Distribution Point</privilege>" \
+                       "<privilege>Read Clustering</privilege>" \
+                       "<privilege>Read Computer Inventory Collection</privilege>" \
+                       "<privilege>Read Conditional Access</privilege>" \
+                       "<privilege>Read Customer Experience Metrics</privilege>" \
+                       "<privilege>Read Engage Settings</privilege>" \
+                       "<privilege>Read GSX Connection</privilege>" \
+                       "<privilege>Read Patch Internal Source</privilege>" \
+                       "<privilege>Read Jamf Imaging</privilege>" \
+                       "<privilege>Read Parent App Settings</privilege>" \
+                       "<privilege>Read JSS URL</privilege>" \
+                       "<privilege>Read Limited Access Settings</privilege>" \
+                       "<privilege>Read Retention Policy</privilege>" \
+                       "<privilege>Read Mobile Device Inventory Collection</privilege>" \
+                       "<privilege>Read Password Policy</privilege>" \
+                       "<privilege>Read Patch Management Settings</privilege>" \
+                       "<privilege>Read PKI</privilege>" \
+                       "<privilege>Read Re-enrollment</privilege>" \
+                       "<privilege>Read Computer Security</privilege>" \
+                       "<privilege>Read Self Service</privilege>" \
+                       "<privilege>Read App Request Settings</privilege>" \
+                       "<privilege>Read Mobile Device Self Service</privilege>" \
+                       "<privilege>Read SSO Settings</privilege>" \
+                       "<privilege>Read SMTP Server</privilege>" \
+                       "<privilege>Read SSO Settings</privilege>" \
+                       "<privilege>Read User-Initiated Enrollment</privilege>" \
+                       "</jss_settings>"
+
+    return desktop_settings
+
+
 def xml_jss_actions(xml_text: str) -> str:
     """
     Gathers the jss_actions data.
@@ -241,3 +283,5 @@ def privilege_wrapper(xml_text: str) -> str:
     """
     return f"<privileges>{xml_text}</privileges></account>"
 
+
+# TODO need context for priviledge set. Desktop will fail some tests cuase they dont have those tags
