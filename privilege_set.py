@@ -2,7 +2,7 @@ from tool_box import tools
 
 # test that is_xml() works to validate xml
 
-t = tools.is_xml("test")
+t = tools.is_xml_str("test")
 print(t)
 
 

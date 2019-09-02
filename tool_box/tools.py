@@ -17,6 +17,22 @@ base_url = os.environ["JAMF_URL_PROD"]
 user_id = os.environ["USER_ID_SET_TEST"]
 
 
+def is_xml_str(xml_to_check: str) -> bool:
+    """
+    Check to see that the string is formatted for xml.
+
+    :param xml_to_check: str
+    :return: bool
+    """
+    try:
+        ElementTree.fromstring(xml_to_check)
+        xml_status = True
+    except ElementTree.ParseError:
+        xml_status = False
+
+    return xml_status
+
+
 def get_accounts_xml() -> object:
     """
     Get xml data from JAMF environment.
@@ -65,22 +81,6 @@ def is_acceptable_privilege_set(privilege_set: str) -> bool:
         acceptable_privilege_set = True
 
     return acceptable_privilege_set
-
-
-def is_xml(xml_to_check: str) -> bool:
-    """
-    Check to see that the string is formatted for xml.
-
-    :param xml_to_check: str
-    :return: bool
-    """
-    try:
-        ElementTree.fromstring(xml_to_check)
-        xml_status = True
-    except ElementTree.ParseError:
-        xml_status = False
-
-    return xml_status
 
 
 def xml_user_info(privilege_set: str, xml_text: str) -> Union[None, str]:
