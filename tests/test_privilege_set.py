@@ -34,10 +34,14 @@ def test_is_acceptable_privilege_set():
     assert not tools.is_acceptable_privilege_set("bad priv set")
 
 
-def test_xml_account_info():
+def test_xml_user_info():
     assert isinstance(tools.xml_user_info("Administrator", xml_text), str)
 
     assert not tools.xml_user_info("bad set", xml_text)
+
+
+def test_make_user_admin():
+    assert tools.make_user_admin(xml_text) == 201
 
 
 def test_xml_user_privileges():
