@@ -16,6 +16,7 @@ desktop_support_jamf_admin = tools.desktop_support_casper_admin()
 
 desktop_support_casper_remote = tools.desktop_support_casper_remote()
 
+# Note that Jamf Imaging Privileges will be turned off for all users other than administrator
 
 privileges = desktop_support_jss_objects + \
              desktop_support_jss_settings + \
@@ -34,7 +35,6 @@ print(put.status_code)
 make_user_admin_prompt = input("type yes to make user an admin")
 if make_user_admin_prompt == 'yes':
     print(tools.make_user_admin(xml_text))
-
 
 
 
