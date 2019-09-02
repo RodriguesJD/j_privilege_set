@@ -75,8 +75,13 @@ def test_xml_recon():
 def test_desktop_support_recon():
     assert tools.is_xml_str(tools.desktop_support_recon())
 
+
 def test_xml_casper_admin():
     assert tools.xml_casper_admin(xml_text)
+
+
+def test_desktop_support_casper_admin():
+    assert tools.is_xml_str(tools.desktop_support_casper_admin())
 
 
 def test_xml_casper_remote():

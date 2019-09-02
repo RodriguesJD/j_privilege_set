@@ -289,7 +289,12 @@ def xml_recon(xml_text: str) -> str:
     return recon
 
 
-def desktop_support_recon():
+def desktop_support_recon() -> str:
+    """
+    Desktop support privileges for recon.
+
+    :return: str
+    """
     recon = "<recon>" \
             "<privilege>Add Computers Remotely</privilege>" \
             "<privilege>Create QuickAdd Packages</privilege>" \
@@ -307,6 +312,19 @@ def xml_casper_admin(xml_text: str) -> str:
     """
     jamf_admin = xml_text.split("<casper_admin>")[1].split("</casper_admin>")[0]
     casper_admin = f"<casper_admin>{jamf_admin}</casper_admin>"
+
+    return casper_admin
+
+
+def desktop_support_casper_admin() -> str:
+    """
+    Desktop support privileges for jamf admin.
+    :return:
+    """
+    casper_admin = "<casper_admin>" \
+                   "<privilege>Use Casper Admin</privilege>" \
+                   "<privilege>Save With Casper Admin</privilege>" \
+                   "</casper_admin>"
 
     return casper_admin
 
